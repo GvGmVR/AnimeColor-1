@@ -928,6 +928,6 @@ class CogVideoX_Fun_Pipeline_Control_Color(DiffusionPipeline):
         self.maybe_free_model_hooks()
 
         if not return_dict:
-            video = torch.from_numpy(video)
+            video = torch.as_tensor(video)
 
         return CogVideoX_Fun_PipelineOutput(videos=video)
